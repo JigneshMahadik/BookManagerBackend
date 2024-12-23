@@ -17,11 +17,11 @@ app.use(cors({
     allowedHeaders: 'Content-Type,Authorization',
     credentials: true
 }));
-
+/
 // app.use(authRoutes);
 app.use(booksRoutes);
 
-mongoose.connect("mongodb+srv://jignesh:dUaszhl26B0rpW0f@cluster0.s7hzif4.mongodb.net/bookManager")
+mongoose.connect("mongodb+srv://jignesh:dUaszhl26B0rpW0f@cluster0.s7hzif4.mongodb.net/")
 // mongoose.connect("mongodb://localhost:27017/bookManager")
 .then(()=>{ console.log("DB Connection Successful"); })
 .catch((error)=>{ console.log("Error while DB Connection !", error); })
