@@ -17,7 +17,7 @@ app.use(cors({
     allowedHeaders: 'Content-Type,Authorization',
     credentials: true
 }));
-/
+
 // app.use(authRoutes);
 app.use(booksRoutes);
 
