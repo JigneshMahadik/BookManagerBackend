@@ -4,6 +4,7 @@ const { default: mongoose } = require("mongoose");
 const cors = require("cors");
 const app = express();
 const booksRoutes = require("./Routes/books");
+require('dotenv').config();
 
 app.use(express.json());
 
@@ -21,7 +22,7 @@ app.use(cors({
 // app.use(authRoutes);
 app.use(booksRoutes);
 
-mongoose.connect("mongodb+srv://jignesh:dUaszhl26B0rpW0f@cluster0.s7hzif4.mongodb.net/")
+mongoose.connect(process.env.dbconnection)
 // mongoose.connect("mongodb://localhost:27017/bookManager")
 .then(()=>{ console.log("DB Connection Successful"); })
 .catch((error)=>{ console.log("Error while DB Connection !", error); })
